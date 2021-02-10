@@ -1,37 +1,56 @@
-## Welcome to GitHub Pages
+# PHP CheatSheet
 
-You can use the [editor on GitHub](https://github.com/markbiek/php-features-cheatsheet/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+This cheatsheet outlines when some various handy features were introduced in different versions of PHP.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+_Obviously not intended to be a comprehensive list._
 
-### Markdown
+## PHP 5.6
+* Variadic functions with `...` 
+	* `function foo($arg1, ...$moreArgs)`
+* Exponentiation with `**`
+* Type declarations for
+	* Function arguments (classes, arrays, interfaces, or `callback`)
+* Grouped namespaces 
+	* `use App\Stuff\{Thing1, Thing2, Thing3}`
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## PHP 7.0
+*  Type declarations for
+	* Function arguments (scalar types like `int`, `string`, etc)
+	* Function return values
+* Null coalescing operator `??`
+* Spaceship operator `<=>`
+* Constant arrays using `define()`
+* 
 
-```markdown
-Syntax highlighted code block
+## PHP 7.1
+* Nullable type declarations 
+	* `function f(?string $s): ?int`
+* `void` function returns 
+	* `function f(): void`
+* `iterable` type declarations
+* Multi-catch exception handling 
+	* `catch (Exception1 | Exception2)`
 
-# Header 1
-## Header 2
-### Header 3
+## PHP 7.2
+* `object` type declarations which allows passing or returning any arbitrary class or object
+	* `function f(object $thing)`
+* Trailing commas in grouped namespaces
+	* `use App\Stuff\{Thing1, Thing2, Thing3,}`
 
-- Bulleted
-- List
+## PHP 7.3
+* `heretic` and `nowdoc` strings
+* Trailing commas allowed in function calls
+	* `function f(arg1, arg2, arg3,)`
+*
 
-1. Numbered
-2. List
+## PHP 7.4
+* Type declarations for class properties 
+	* Excludes `void` and `callable`
+	* Nullable is allowed `private ?string $s;`
+* Spread operator to merge arrays
+	* `['a', 'b', ...$others]`
+* Arrow functions
+	* `fn($n) => $n + 1`
+	* Automatically inherits variables in the parent scope without needing `use()`
+* Null coalescing assignment operator `??=`
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/markbiek/php-features-cheatsheet/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
