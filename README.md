@@ -20,7 +20,6 @@ _Obviously not intended to be a comprehensive list._
 * Null coalescing operator `??`
 * Spaceship operator `<=>`
 * Constant arrays using `define()`
-* 
 
 ## PHP 7.1
 * Nullable type declarations 
@@ -41,7 +40,6 @@ _Obviously not intended to be a comprehensive list._
 * `heretic` and `nowdoc` strings
 * Trailing commas allowed in function calls
 	* `function f(arg1, arg2, arg3,)`
-*
 
 ## PHP 7.4
 * Type declarations for class properties 
