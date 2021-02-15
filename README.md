@@ -52,3 +52,34 @@ _Obviously not intended to be a comprehensive list._
 	* Automatically inherits variables in the parent scope without needing `use()`
 * Null coalescing assignment operator `??=`
 
+## PHP 8.0
+* Union types
+	* `function foo(Foo|Bar $input): int|float`
+* Nullsafe operator
+	* `$dateAsString = $booking->getStartDate()?->asDateTimeString();`
+* Named function arguments
+	* `function foo(string $a, ?string $c = null)`
+	* `foo(a: 'this is a', c: 'this is c')`
+* [Attributes](https://www.php.net/manual/en/language.attributes.php)
+* Constructor property promotion
+```
+class Thing {
+  public function __construct(
+  	public string $name = ''
+  ) {}
+}
+
+$thing = new Thing('Mark');
+
+echo $this->name;
+```
+* Match expressions
+	* Similar to switch between results can be returned or stored.
+	* `break` not needed
+	* Strict comparisons
+```
+echo match (8.0) {
+  '8.0' => "Oh no!",
+  8.0 => "This is what I expected",
+};
+```
