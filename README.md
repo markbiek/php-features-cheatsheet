@@ -14,6 +14,7 @@ _Obviously not intended to be a comprehensive list._
 	* `foo(a: 'this is a', c: 'this is c')`
 * [Attributes](https://www.php.net/manual/en/language.attributes.php)
 * Constructor property promotion
+
 ```
 class Thing {
   public function __construct(
@@ -29,6 +30,7 @@ echo $this->name;
 	* Similar to switch between results can be returned or stored.
 	* `break` not needed
 	* Strict comparisons
+	
 ```
 echo match (8.0) {
   '8.0' => "Oh no!",
