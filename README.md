@@ -50,7 +50,6 @@ echo match (8.0) {
 * Null coalescing assignment operator `??=`
 
 ## PHP 7.3
-* `heretic` and `nowdoc` strings
 * Trailing commas allowed in function calls
 	* `function f(arg1, arg2, arg3,)`
 	
@@ -78,6 +77,7 @@ echo match (8.0) {
 * Constant arrays using `define()`
 
 ## PHP 5.6
+* `heredoc` and `nowdoc` strings
 * Variadic functions with `...` 
 	* `function foo($arg1, ...$moreArgs)`
 * Exponentiation with `**`
