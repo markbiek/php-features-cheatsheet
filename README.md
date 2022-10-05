@@ -6,6 +6,7 @@ _Obviously not intended to be a comprehensive list._
 
 ## PHP 8.1
 * Enums
+
 ```
 enum Color {
   case Red;
@@ -13,7 +14,9 @@ enum Color {
   case Blue;
 }
 ```
+
 * Array unpacking with string keys (unpacking previously only worked with numeric keys)
+
 ```
 $a1 = ["a" => 1];
 $a2 = ["b" => 2];
@@ -22,21 +25,23 @@ $newArr = [...$a1, ...$a2];
 
 // ["a" => 1, "b" => 2]
 ```
+
 * Use `new` for default parameter values or constructor property promotion
 	* `function foo( $input = new Bar() )`
 * Readonly class properties: `public readonly string $name` (also works with constructor property promotion)
 * First-class callable syntax
+
 ```
 function foo(int $a, int $b) { }
 
 $foo = foo(...);
 $foo(1, 2);
 ```
+
 * Intersection types. Similar to Union types but the input must be _all_ of the specified types.
 * New `never` return type for functions. Signifies that the function wills top all program flow.
 * New [`array_is_list`](https://www.php.net/manual/en/function.array-is-list.php) function.
 * Specify class constants as `final` to prevent them from being overridden during inheritance.
-* 
 
 ## PHP 8.0
 * Union types
