@@ -4,6 +4,67 @@ This cheatsheet outlines when some various handy features were introduced in dif
 
 _Obviously not intended to be a comprehensive list._
 
+## PHP 8.4
+
+* Class property hooks. Property hooks can also be defined in interfaces
+```
+class User {
+    public string $phone {
+        set (string $newPhone) {
+            // validate phone
+        }
+        get => $this->phone;
+    }
+}
+```
+
+* Asymmetric visibility for class properties. This means a property can be public/protected/private depending on if the property is being read or written. Also works for properties promoted in the constructor
+```
+class User {
+    // This property can only be set from inside the class
+    public private(set) string $name;
+}
+```
+
+* New array functions
+  * `array_find` takes a callback and returns the first element for which the callback returns true
+  * `array_find_key` which is the same as `array_find` but returns the key
+  * `array_any` returns true if at least one element matches the callback
+  * `array_all` returns true if all elements match the callback
+
+## PHP 8.3
+
+* Class constants can be typed
+* New `json_validate` function
+
+## PHP 8.2
+
+* Read-only classes
+```
+readonly class Person {
+    public function __construct(
+        public string $name,
+        public string $address,
+    ) {}
+}
+```
+
+* `null`, `true`, and `false are standalone types
+```
+function bigNope(): false {
+    return false;
+}
+```
+
+* Combine union and intersection types
+```
+function createAnimal( (Cat|Dog)|null $animal ) {
+    // do stuff
+}
+```
+
+* Traits can have constants, though the constant is only accessible from the class that uses the trait.
+
 ## PHP 8.1
 * Enums
 
